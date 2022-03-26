@@ -8,8 +8,8 @@ const MainContent = () => {
   return (
     <Layout>
       <Routes>
-        <Route path='/' element={<Author />} />
-        <Route path='/favourite-author' element={<FavouriteAuthor />} />
+        <Route path='/authors' element={<Author />} />
+        <Route path='/favourite-authors' element={<FavouriteAuthor />} />
       </Routes>
       {/* <Footer>Footer</Footer> */}
     </Layout>

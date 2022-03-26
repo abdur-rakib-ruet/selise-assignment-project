@@ -26,11 +26,11 @@ const SideBar = () => {
         defaultSelectedKeys={[location.pathname]}
         mode='inline'
       >
-        <Menu.Item key='/' icon={<UserOutlined />}>
-          <Link to='/'>Author</Link>
+        <Menu.Item key='/authors' icon={<UserOutlined />}>
+          <Link to='/authors'>Author</Link>
         </Menu.Item>
-        <Menu.Item key='/favourite-author' icon={<StarOutlined />}>
-          <Link to='/favourite-author'>Favourite Author</Link>
+        <Menu.Item key='/favourite-authors' icon={<StarOutlined />}>
+          <Link to='/favourite-authors'>Favourite Author</Link>
         </Menu.Item>
       </Menu>
     </Sider>

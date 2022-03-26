@@ -9,5 +9,12 @@ export const addAuthors = (author) => {
     "favouriteAuthors",
     JSON.stringify([...favouriteAuthors, author])
   );
+
+  //   save favourite author ids
+  const ids = JSON.parse(localStorage.getItem("ids")) || {};
+  localStorage.setItem(
+    "ids",
+    JSON.stringify({ ...ids, [author._id]: author._id })
+  );
   message.success("Added to favourite", 0.8);
 };
