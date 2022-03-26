@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { getAuthors } from "../../sevices/getAuthors";
 import SingleAuthor from "./SingleAuthor";
 import "./Author.css";
+import LoadingContent from "../LoadingContent";
 
 const Author = () => {
   const [authors, setAuthors] = React.useState();
@@ -24,10 +25,11 @@ const Author = () => {
   return (
     <>
       <Row style={{ margin: 6 }}>
-        {authors &&
-          authors.map((author) => (
-            <SingleAuthor key={author.slug} author={author} />
-          ))}
+        {authors
+          ? authors.map((author) => (
+              <SingleAuthor key={author.slug} author={author} />
+            ))
+          : new Array(9).fill(0).map((el, i) => <LoadingContent key={i} />)}
       </Row>
       <div className='pagination-box'>
         <Pagination
