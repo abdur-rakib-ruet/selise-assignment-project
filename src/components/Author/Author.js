@@ -27,7 +27,7 @@ const Author = () => {
       <Row style={{ margin: 6 }}>
         {authors
           ? authors.map((author) => (
-              <SingleAuthor key={author.slug} author={author} />
+              <SingleAuthor key={author._id} author={author} />
             ))
           : new Array(9).fill(0).map((el, i) => <LoadingContent key={i} />)}
       </Row>

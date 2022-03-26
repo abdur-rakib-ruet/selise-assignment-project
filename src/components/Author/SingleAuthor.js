@@ -1,9 +1,16 @@
 import React from "react";
 import { Button, Card, Col, Typography } from "antd";
+import { addAuthors } from "../../sevices/addAuthors";
 
 const { Text, Link } = Typography;
 
-const SingleAuthor = ({ author: { name, bio, link } }) => {
+const SingleAuthor = ({ author }) => {
+  const { name, bio, link } = author;
+
+  // handle add to favourites
+  const handleAddToFavorite = (author) => {
+    addAuthors(author);
+  };
   return (
     <Col lg={{ span: 8 }} md={{ span: 24 }} sm={{ span: 24 }} xs={{ span: 24 }}>
       <Card style={{ margin: 6 }}>
@@ -20,7 +27,9 @@ const SingleAuthor = ({ author: { name, bio, link } }) => {
           <Text strong>Link:</Text> {link}
         </Link>
         <div style={{ marginTop: 10 }}>
-          <Button type='primary'>Add Favourite</Button>
+          <Button onClick={() => handleAddToFavorite(author)} type='primary'>
+            Add Favourite
+          </Button>
         </div>
       </Card>
     </Col>
