@@ -1,13 +1,11 @@
 import React from "react";
-import { Typography } from "antd";
 import "./App.css";
-
-const { Text } = Typography;
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <div>
-      <Text type='success'>Selise Assignment Project</Text>
+      <Home />
     </div>
   );
 };

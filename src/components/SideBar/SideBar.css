@@ -1,0 +1,11 @@
+.ant-layout-sider {
+  background: white;
+  height: 100vh;
+}
+.ant-layout-sider-trigger {
+  background: white;
+}
+
+.anticon {
+  color: gray;
+}
