@@ -27,6 +27,7 @@ const SingleAuthor = ({ author }) => {
     } else {
       setIsFavorite(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // render button conditionally
