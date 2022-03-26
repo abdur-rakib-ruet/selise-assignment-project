@@ -5,30 +5,33 @@ import { removeAuthors } from "../../sevices/removeAuthors";
 
 const { Text, Link, Paragraph } = Typography;
 
-const SingleAuthor = ({ author }) => {
+const SingleAuthor = ({ author, getFavouriteAuthors }) => {
   const [isFavorite, setIsFavorite] = React.useState(false);
+  const [ids, setIds] = React.useState(JSON.parse(localStorage.getItem("ids")));
   const { name, bio, link } = author;
 
   // handle add to favourites
   const handleAddToFavorite = (author) => {
     addAuthors(author);
+    setIds(JSON.parse(localStorage.getItem("ids")));
   };
 
   // remove from favourite
   const handleRemoveFromFavorite = (author) => {
     removeAuthors(author);
+    setIds(JSON.parse(localStorage.getItem("ids")));
+    getFavouriteAuthors && getFavouriteAuthors();
   };
 
   // check favourite
   React.useEffect(() => {
-    const ids = JSON.parse(localStorage.getItem("ids"));
     if (ids && ids[author._id]) {
       setIsFavorite(true);
     } else {
       setIsFavorite(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [ids]);
 
   // render button conditionally
   const renderButton = () => {

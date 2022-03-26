@@ -37,7 +37,11 @@ const FavouriteAuthor = () => {
       </Title>
       <Row style={{ margin: 6 }}>
         {favouriteAuthors.map((author) => (
-          <SingleAuthor key={author._id} author={author} />
+          <SingleAuthor
+            getFavouriteAuthors={getFavouriteAuthors}
+            key={author._id}
+            author={author}
+          />
         ))}
       </Row>
       {/* <div className='pagination-box'>
