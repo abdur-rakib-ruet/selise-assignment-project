@@ -10,13 +10,16 @@ React, React Router, Ant Design
 
 Clone down this repository. You will need `node` and `yarn` installed globally on your machine.
 
-To Install Dependency
+To Install Dependency:  
 `yarn`  
+
 To Run Test Suite:  
 `yarn test`  
-To Start Server:
+
+To Start Server:  
 `yarn start`  
-To Visit App:
+
+To Visit App:     
 `localhost:3000/authors`
 
 ## License
