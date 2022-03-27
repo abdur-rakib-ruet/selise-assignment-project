@@ -1,1 +1,1 @@
-export const baseUrl = "https://quotable.io";
+export const baseUrl = "https://api.quotable.io";

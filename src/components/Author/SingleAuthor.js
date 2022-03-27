@@ -54,7 +54,7 @@ const SingleAuthor = ({ author, getFavouriteAuthors }) => {
     }
   };
   return (
-    <Col lg={{ span: 8 }} md={{ span: 24 }} sm={{ span: 24 }} xs={{ span: 24 }}>
+    <Col lg={{ span: 8 }} md={{ span: 12 }} sm={{ span: 24 }} xs={{ span: 24 }}>
       <Card style={{ margin: 6 }}>
         <Text>
           <Text strong>Name:</Text> {name}
